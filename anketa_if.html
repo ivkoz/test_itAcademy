@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let lastName = prompt("Введите вашу фамилию");
+    let firstName = prompt ("Введите ваше имя ");
+    let middleName = prompt ("Введите ваше отчество");
+    let years = Number(prompt ("Сколько вам лет?"));
+    let x = confirm("Ваш пол мужской?");
+    let z;
+    if (x){
+        x = "пол: Мужской"
+    }else{
+        x = "пол: Женский"
+    }
+
+    if (x === "пол: Мужской"){
+        if(years <= 63){
+            z = "Не пенсионный возраст"  
+        } else {
+            z = " Пенсионный возраст"
+        }
+    }else{
+        if(years <= 58){
+            z = "Не пенсионный возраст"  
+        }else{
+            z = " Пенсионный возраст"
+        }
+    }
+    alert ([lastName, firstName, middleName, years, x, z]);
+</script>
+</html>

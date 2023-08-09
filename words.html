@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let text = prompt("Введите слова")
+        let words = text.split(" ");
+        let sortText;
+        function wordLenght (str1, str2){
+            // let numb = str.lenght
+            // return numb;
+            if (str1.length > str2.length) return 1;
+            if (str1.length == str2.length) return 0;
+            if (str1.length < str2.length) return -1;
+        }
+
+        sortText = words.sort(wordLenght);
+        console.log(sortText.slice(-3))
+    </script>
+</body>
+</html>

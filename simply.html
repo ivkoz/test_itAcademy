@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+
+function isDel(x, y) {
+    let ost = x % y;
+    if (ost != 0) {
+        return false;
+    } else {
+        return true;
+    }
+}
+
+function isSimple(a) {
+    for (let i = 2; i <= a; i++) {
+        let isPrime = true;
+        for (let j = 2; j < i; j++) {
+            if (isDel(i, j)) {
+                isPrime = false;
+                break;
+            }
+        }
+        if (isPrime) {
+            console.log(i);
+        }
+    }
+}
+
+isSimple(1000);
+
+</script>
+</html>
